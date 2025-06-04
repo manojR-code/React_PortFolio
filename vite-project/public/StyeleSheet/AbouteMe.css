@@ -1,0 +1,85 @@
+/* Full page black with gradient background */
+.about-page {
+  background:black;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Glass-style card */
+.about-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease-in-out;
+}
+
+.about-card:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.1);
+}
+
+/* Avatar with glowing style */
+.avatar {
+  background: #00bfff;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(0, 191, 255, 0.6);
+}
+
+.name {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 16px;
+  color: #dddddd;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.info p {
+  font-size: 15px;
+  color: #cccccc;
+  margin: 10px 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .about-card {
+    padding: 30px 20px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .description, .info p {
+    font-size: 14px;
+  }
+}

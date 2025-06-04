@@ -1,0 +1,583 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+}
+
+.Header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav li {
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.3s;
+  color: white;
+  font-size: 20px;
+  list-style: none;
+  text-decoration: none;
+}
+li a {
+  color: white;
+  text-decoration: none;
+   padding: 10px 10px;
+}
+.nav li a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 40px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: 250px;
+}
+
+.container .name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  color: white;
+  margin: 0 30px;
+  font-size: 60px;
+  white-space: nowrap;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  color: white;
+  margin: 0 30px;
+  white-space: nowrap;
+}
+
+.HeroSection {
+  width: 100vw;
+  height: calc(100vh - 350px);
+  display: flex;
+}
+
+.Image {
+  display: flex;
+  justify-content: center;
+  min-width: 50%;
+  min-height: 70%;
+}
+
+.Image img {
+  min-width: 50%;
+  min-height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 30px;
+  box-shadow: 0px 8px 600px rgb(0, 0, 0);
+  opacity: 0.7;
+}
+
+.Information {
+  width: 50%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 25px;
+  line-height: 50px;
+  color: white;
+}
+
+.Information h6 {
+  text-decoration: dotted underline;
+}
+
+.my-skills-container {
+  margin-top: 30px;
+  background-color: #000;
+  color: #fff;
+  min-height: auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.my-skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-heading h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.right-description p {
+  color: #ccc;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.about-me {
+  color: #aaa;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 60px;
+  padding: 0 20px;
+}
+
+.hero-section {
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  height: auto;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.Image_container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container_DarkImage {
+  top: 0;
+  position: absolute;
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Image_container img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.work-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.work-card {
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Position adjustments */
+.up {
+  transform: translateY(-20px);
+}
+
+.down {
+  transform: translateY(20px);
+}
+
+.work-image {
+  width: 100%;
+  height: auto;
+  border: 2px solid transparent;
+
+}
+
+.Image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* or cover */
+  display: block;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  /* optional, for shadow */
+}
+
+/* Blurred corners overlay */
+.work-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  /* Strong, soft shadow */
+  display: block;
+  opacity: 0.7;
+}
+
+.work-image:hover {
+  transform: scale(1.05);
+}
+
+.work-caption {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+}
+
+.WhatIDo_Container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.WhatIDo_Container .Main {
+  padding: 10px 10px;
+  text-align: left;
+  width: 100%;
+  font-size: 30px;
+  min-height: 150px;
+  color: white;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+}
+/*Contact*/
+.get-in-touch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  flex-wrap: wrap;
+  line-height: 2rem;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 280px;
+  margin-right: 2rem;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00ffcc;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.contact-info li {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.submit-page {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+  color: #fff;
+}
+
+.submit-form {
+  flex: 1;
+  max-width: 500px;
+  margin-right: 2rem;
+}
+
+.submit-form h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #00ffd0;
+}
+
+.submit-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-form label {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.simple-footer {
+  background-color: #000;
+  color: #aaa;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.submit-form input,
+.submit-form textarea {
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.submit-form input:focus,
+.submit-form textarea:focus {
+  outline: 2px solid #00ffd0;
+}
+
+.submit-form button {
+  padding: 0.9rem 1.5rem;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-form button:hover {
+  background-color: #00c0a0;
+}
+
+.submit-image {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   box-shadow: 50px 50px 70px rgba(0, 0, 0, 0.2);
+}
+
+.submit-image img {
+  max-width: 100%;
+  max-height: 450px;
+  border-radius: 12px;
+  object-fit: cover;
+  opacity: 0.7;
+ 
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .submit-page {
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .submit-form {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .submit-image img {
+    max-height: 300px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .contact-right {
+    max-height: 300px;
+  }
+
+  .contact-right img {
+    max-width: 250px;
+  }
+}
+
+
+
+/* Responsive Design */
+
+
+@media (max-width: 768px) {
+  .get-in-touch {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-info {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+/*end here*/
+.cardsContainer .cards {
+  min-width: 300px;
+  min-height: 100px;
+ color: white;
+}
+.cardsContainer .cards .head{
+  width: 100%;
+  height: 50px;
+  color: white;
+}
+@media (min-width: 768px) {
+  .my-skills-content {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .left-heading {
+    flex: 1;
+  }
+
+  .right-description {
+    flex: 1;
+    padding-left: 40px;
+  }
+
+}
+
+@media (max-width:1200px) {
+.WhatIDo_Container{
+    height: auto;
+  }
+  .HeroSection {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .Image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .Information {
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+    line-height: 50px;
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .Container_DarkImage .info h1 {
+    font-size: 16px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 25px;
+  }
+
+  .container .name {
+    font-size: 30px;
+
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background: black;
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 10;
+    border: 0.5px solid white;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav li {
+    padding: 10px 0;
+    color: white;
+  }
+
+  .Information {
+    font-size: 20px;
+
+  }
+
+  .container {
+    height: 150px;
+  }
+
+  .Image img {
+    border-radius: 0px;
+  }
+
+  .WhatIDo_Container .Main {
+    font-size: 20px;
+    min-height: 80px;
+    color: white;
+  }
+
+  .cardsContainer {
+    width: 100%;
+    height: calc(100vh - 80px);
+  }
+}

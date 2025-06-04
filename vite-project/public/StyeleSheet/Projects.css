@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Projects.css */
+
+/* Main container */
+.projects-container {
+  padding: 20px;
+  background-color: black;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+/* Page title */
+.projects-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Grid layout for project cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card styling */
+.project-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: black;
+}
+
+/* Card title */
+.project-card h2 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  color: white;
+}
+
+/* Card description */
+.project-card p {
+  padding: 10px 0;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Link style */
+.project-card a {
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+.project-card img{
+  max-width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
