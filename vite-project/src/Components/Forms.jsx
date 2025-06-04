@@ -9,7 +9,7 @@ const SubmitDetails = () => {
   const [Name ,SetName] = useState('');
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post('http://localhost:3000/',
+    await axios.post('https://serverrq-1.onrender.com',
     { email, description,Name },
     {
       headers: {
@@ -24,8 +24,8 @@ const SubmitDetails = () => {
     setDescription('');
   })
   .catch((error) => {
-     notify();
-    setEmail('');
+    toast.error('Submission failed!');
+    toast.error(error.message);
   });
 
   };
