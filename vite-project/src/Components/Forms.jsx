@@ -9,6 +9,7 @@ const SubmitDetails = () => {
   const [Name ,SetName] = useState('');
   const handleSubmit = async (e) => {
     e.preventDefault();
+   toast.warn('Submitting your details... Please Wait for some time')
     await axios.post('https://serverrq-1.onrender.com',
     { email, description,Name },
     {
@@ -19,7 +20,7 @@ const SubmitDetails = () => {
     }
   )
   .then(() => {
-    notify();
+    toast.success('Details submitted successfully!'); 
     setEmail('');
     setDescription('');
   })
@@ -29,10 +30,6 @@ const SubmitDetails = () => {
   });
 
   };
-   function notify(variable='success') {
-    toast.success('Details submitted successfully!'); 
-  }
-
   return (
      
     <div className="submit-page">
